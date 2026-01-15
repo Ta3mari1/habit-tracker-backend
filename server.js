@@ -38,6 +38,9 @@ app.use((err, req, res, next) => {
         error: process.env.NODE_ENV === 'development' ? err.message : undefined
     });
 });
+app.get('/', (req, res) => {
+    res.send('Habit Tracker Backend is running');
+});
 
 // 404 handler
 app.use((req, res) => {
